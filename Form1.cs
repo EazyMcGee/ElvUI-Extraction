@@ -23,7 +23,7 @@ public partial class Form1 : Form
     }
 
     //store folder location 
-    private string MainFolder = string.Empty;
+    private string _MainFolder = string.Empty;
 
     // Form load method
     private void WoW_Prompt(object sender, EventArgs e)
@@ -37,7 +37,7 @@ public partial class Form1 : Form
 
         if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
         {
-            MainFolder = folderBrowserDialog.SelectedPath;
+            _MainFolder = folderBrowserDialog.SelectedPath;
         }
     }
 
@@ -62,7 +62,7 @@ public partial class Form1 : Form
     {
         FolderBrowserDialog ofd = new FolderBrowserDialog
         {
-            InitialDirectory = MainFolder
+            InitialDirectory = _MainFolder
         };
 
         if (ofd.ShowDialog(this) == DialogResult.OK)
