@@ -100,9 +100,9 @@ public partial class Form1 : Form
     private void ExtractBtn_Click(object sender, EventArgs e)
     {
         var zipPath = ElvUIPath.Text;
-        var extract_classic_ = _classic_Path.Text;
-        var extract_classic_era_ = _classic_era_Path.Text;
-        var extract_retail_ = _retail_Path.Text;
+        var extractClassic = _classic_Path.Text;
+        var extractClassicEra = _classic_era_Path.Text;
+        var extractRetail = _retail_Path.Text;
 
         if (_classic_Path.Text.Length == 0)
         {
@@ -110,7 +110,7 @@ public partial class Form1 : Form
         }
         else
         {
-            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extract_classic_, true);
+            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractClassic, true);
         }
 
         if (_classic_era_Path.Text.Length == 0)
@@ -119,7 +119,7 @@ public partial class Form1 : Form
         }
         else
         {
-            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extract_classic_era_, true);
+            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractClassicEra, true);
         }
         if (_retail_Path.Text.Length == 0)
         {
@@ -127,7 +127,7 @@ public partial class Form1 : Form
         }
         else
         {
-            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extract_retail_, true);
+            System.IO.Compression.ZipFile.ExtractToDirectory(zipPath, extractRetail, true);
         }
         //Error Handling
         if (ElvUIPath.Text.Length == 0)
