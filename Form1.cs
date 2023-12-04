@@ -22,6 +22,7 @@ public partial class Form1 : Form
         InitializeComponent();
     }
 
+    //store folder location 
     private string MainFolder = string.Empty;
 
     // Form load method
